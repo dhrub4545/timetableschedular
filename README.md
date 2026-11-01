@@ -9,6 +9,14 @@
 
 ---
 
+## ?? Application Screenshot & Interface Preview
+
+<div align="center">
+  <img src="./assets/screenshot.png" alt="Application Interface Preview" width="850" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</div>
+
+---
+
 ## 📋 Executive Summary & Problem Solved
 
 Generating an academic timetable for schools, colleges, and training academies is a notoriously difficult **NP-complete Constraint Satisfaction Problem (CSP)**. Academic administrators spend weeks each semester attempting to manually construct schedules that satisfy rigid constraints:
