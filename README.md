@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![React Version](https://img.shields.io/badge/React-19.1-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Bundler-Vite%207.1-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Google Gemini AI](https://img.shields.io/badge/AI%20Model-Gemini%201.5%20Flash-8E75C2?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Google Gemini AI](https://img.shields.io/badge/AI%20Model-Gemini%203.8%20Flash-8E75C2?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![Google GenAI SDK](https://img.shields.io/badge/SDK-%40google%2Fgenerative--ai%200.24-4285F4?logo=google&logoColor=white)](https://www.npmjs.com/package/@google/generative-ai)
 [![Deployment](https://img.shields.io/badge/Deployment-Vercel%20%7C%20GitHub%20Pages-000000?logo=vercel&logoColor=white)](https://vercel.com/)
 
