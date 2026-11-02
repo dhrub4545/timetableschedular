@@ -87,7 +87,7 @@ flowchart TD
 
     PromptBuilder -->|"API Key Present"| GeminiClient
     GeminiClient -->|"generateContent()"| GeminiAPI
-    GeminiAPI -->>GeminiClient: Raw AI Response Text
+    GeminiAPI -->|"Raw AI Response Text"| GeminiClient
     GeminiClient --> JSONParser
     JSONParser --> ConflictValidator
     ConflictValidator --> ConflictResolver
