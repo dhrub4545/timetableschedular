@@ -27,13 +27,13 @@ Generating an academic timetable for schools, colleges, and training academies i
 4. **Pedagogical Balance**: Demanding subjects (Mathematics, Chemistry) should not be clustered in back-to-back late-afternoon periods or on single days.
 5. **Teacher Workload Limits**: Individual teachers have maximum weekly period caps and preferred off-periods.
 
-**AI Timetable Scheduler (`timetableschedular`)** is a next-generation web application built with **React 19** and **Vite 7**. It combines the reasoning capabilities of **Google Gemini 1.5 Flash** with deterministic post-processing algorithms (`validateAndFixTimetableStructure` and `resolveTeacherConflicts`). It generates balanced, conflict-free institutional schedules in seconds and includes a robust offline fallback heuristic engine that guarantees results even without an API key.
+**AI Timetable Scheduler (`timetableschedular`)** is a next-generation web application built with **React 19** and **Vite 7**. It combines the reasoning capabilities of **Google Gemini 2.5 Flash** with deterministic post-processing algorithms (`validateAndFixTimetableStructure` and `resolveTeacherConflicts`). It generates balanced, conflict-free institutional schedules in seconds and includes a robust offline fallback heuristic engine that guarantees results even without an API key.
 
 ---
 
 ## ✨ Key Features
 
-- 🤖 **Google Gemini 1.5 Flash Reasoning Engine**: Prompts Gemini with structured institutional constraints, class lists, teacher assignments, and weekly period frequencies.
+- 🤖 **Google Gemini 2.5 Flash Reasoning Engine**: Prompts Gemini with structured institutional constraints, class lists, teacher assignments, and weekly period frequencies.
 - 🛡️ **Algorithmic Conflict Resolution**: Post-processing validation layer that detects any overlapping teacher assignments or room collisions in the AI output and swaps conflicting slots deterministically.
 - 🔄 **Zero-Failure Client Fallback Engine**: If the Gemini API key is missing or quota is exceeded, the system automatically falls back to an internal combinatorial scheduling algorithm.
 - ⚙️ **Comprehensive Institutional Admin Form**:
@@ -63,7 +63,7 @@ flowchart TD
         
         subgraph GenerationEngine["Scheduling & Resolution Engine"]
             PromptBuilder["createEnhancedPrompt (Strict Rules Formulation)"]
-            GeminiClient["Google Generative AI Client (gemini-1.5-flash)"]
+            GeminiClient["Google Generative AI Client (gemini-2.5-flash)"]
             JSONParser["extractJSON & Schema Validator"]
             ConflictValidator["validateAndFixTimetableStructure()"]
             ConflictResolver["resolveTeacherConflicts() (Deterministic Swapper)"]
@@ -77,7 +77,7 @@ flowchart TD
     end
 
     subgraph CloudAI["Google DeepMind AI Services"]
-        GeminiAPI["Google Gemini 1.5 Flash API Endpoint"]
+        GeminiAPI["Google Gemini 2.5 Flash API Endpoint"]
     end
 
     Admin --> InputConfig
@@ -110,7 +110,7 @@ sequenceDiagram
     participant Admin as Academic Coordinator
     participant App as React App Controller
     participant Engine as Gemini API Service
-    participant Gemini as Google Gemini 1.5 Flash
+    participant Gemini as Google Gemini 2.5 Flash
     participant Resolver as Conflict Resolution Engine
     participant View as Timetable View (Classic / Modern)
 
@@ -154,7 +154,7 @@ sequenceDiagram
 | **DOM Renderer** | React DOM | `^19.1.1` | High-performance React DOM renderer |
 | **Build Tooling**| Vite | `^7.1.2` | Next-generation frontend tooling with lightning-fast HMR |
 | **AI Engine** | `@google/generative-ai` | `^0.24.1` | Official Google Generative AI JavaScript SDK |
-| **Model** | `gemini-1.5-flash` | Latest | High-throughput, low-latency multimodal reasoning model |
+| **Model** | `gemini-2.5-flash` | Latest | High-throughput, low-latency multimodal reasoning model |
 | **Linting & Code**| ESLint + Plugins | `^9.33.0` | Strict linting for React 19 hooks and modern JS standards |
 | **Styling** | Vanilla CSS3 / CSS Modules | Modern | Responsive grid and print-friendly media styles |
 
@@ -174,7 +174,7 @@ timetableschedular/
 │   │   ├── ClassicTimetable.jsx      # Institutional tabular print-ready matrix view
 │   │   └── TimetableDisplay.jsx      # Modern interactive card view with filter controls
 │   ├── services/
-│   └── geminiApi.js                  # Gemini 1.5 Flash prompt formulation, parsing & conflict resolver
+│   └── geminiApi.js                  # Gemini 2.5 Flash prompt formulation, parsing & conflict resolver
 │   ├── App.css                       # Application layout and visual styles
 │   ├── App.jsx                       # Root view coordinator, state management & fallback logic
 │   ├── index.css                     # Global design tokens and reset styles
